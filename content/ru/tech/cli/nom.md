@@ -4,8 +4,11 @@ draft = false
 title = 'nom'
 +++
 
+![](/images/01-nom/01.png)
+
 Консольный RSS-ридер Nom
 ===
+
 
 1. Introduction
   • Briefly introduce yourself and express your need for a CLI-based RSS news reader.
@@ -41,8 +44,11 @@ title = 'nom'
   • Narrate the solution you discovered, using Crush to create a Python script for converting OPML to Nom-compatible
   formats.
 
+![Scenario 1: Across columns](/images/01-nom/03.png)
+
 Прежде чем трогать руками Nom, нужно было понять насколько запарно будет взять мои закладки и засунуть их в Nom. NetNewsWire умеет экспортировать закладки в OPML, а Nom читает закладки из текстового yaml-файла. Частьь данных, которые есть в OPML не используются внутри Nom, но я достаточно легко смог расстаться с ними (папки и какие-то не нужные мне описания).
 До кучи нашёлся повод поиграть с Crush — классная штука, от тех же Charmbracelet, которая является консольным инструментом для работы с языковыми моделями. В итоге — запускаю Crush и прошу его накатать на Питоне скрипт, который сормирует Nom-совместимый yaml-файл. Crush поскрипел мозгами полторы минуты, выдал мне скрипт, я его немного поправил, запустил uv run opml2yaml.py и все мои закладки оказались внутри Num. 
+![](/images/01-nom/04.png)
 
 5. Setting Up and Configuring Nom
   • Guide the readers through your installation process and initial configuration of Nom.
@@ -56,16 +62,22 @@ title = 'nom'
   • Talk about any notable features or integrations you've found helpful.
 
 Nom прекрасен — вводишь в консоли nom, нажимаешь enter и всё — вожделенный список загловков, по которым перемешаешься стрелочками или j/k. Но это если вам достаточно стандартного, обычного использования. We need to go deeper!
+![](/images/01-nom/02.png)
+
 
 7. Overcoming Initial Challenges
   • Describe the hurdles you faced during your learning curve with Nom (e.g., importing feeds, understanding key
   commands).
   • Detail how you overcame these challenges and are now comfortably using Nom as your primary news reader.
 
+![](/images/01-nom/05.png)
+
 Если вы извращенец, то можно делать как я, смотрите:
     - внутри neovim (из которого и так не часто выходим) делаем вертикальный сплит
     - в сплите (мне нравится в правом буфере) запускам терминал :terminal
     - и вот уже в терминале выполняем команду nom
+
+![](/images/01-nom/05.png)
 
 
 8. Final Thoughts and Recommendations
@@ -74,4 +86,4 @@ Nom прекрасен — вводишь в консоли nom, нажимае
 
 Что имеем в итоге: консольный RSS-ридер Nom, запихнутый внутрь Neovim, позволяющий читать новости, а в соседнем сплите можно редактировать текст или открыть там второй num, например. Ну круто же!
 
-
+![](/images/01-nom/06.png)
