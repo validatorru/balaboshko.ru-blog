@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alex Balaboshko Пишу/читаю</title>
+    <link>//localhost:1313/ru/</link>
+    <description>Recent content on Alex Balaboshko Пишу/читаю</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Sun, 24 Aug 2025 15:08:22 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/ru/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nom</title>
+      <link>//localhost:1313/ru/tech/cli/nom/</link>
+      <pubDate>Sun, 24 Aug 2025 15:08:22 +0300</pubDate>
+      <guid>//localhost:1313/ru/tech/cli/nom/</guid>
+      <description>&lt;h1 id=&#34;консольный-rss-ридер-nom&#34;&gt;Консольный RSS-ридер Nom&lt;/h1&gt;&#xA;&lt;p&gt;С 2001 года командная строка присутствует в моей жизни, работе и вообще. Linux, MacOs, вот это всё.&lt;/p&gt;&#xA;&lt;p&gt;Во времена трилобитов было такое развлечение — читать текстовые «новости» (ну как новости, всякую дребедень типа обновлений в чьих-то блогах, уведомления о каких-то новых статьях и прочее).&#xA;Сначала это читалось через всякие отдельные программы, потом появился Google Reader, в котором у меня скопилось море всяких подписок. Все, кого я знал, много читали. Постепенноо интернет всё ускорялось, появлялись подкасты, видео-хостинги, а google reader закрылся. Наступило время, когда подавляющее количество потребляемого контента стало даже не аудио, а видео, — чтение отошло на задний план.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
