@@ -1,4 +1,4 @@
-baseurl      = "localhost/"
+baseurl      = "/"
 title        = "balaboshko.ru"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
@@ -23,7 +23,7 @@ theme        = "hello-friend-ng"
   # enableGlobalLanguageMenu = true
 
   # Metadata mostly used in document's head
-  description = "My new homepage or blog"
+  description = "Алексей Балабошко"
   keywords = "homepage, blog"
   images = [""]
 
@@ -64,4 +64,4 @@ theme        = "hello-friend-ng"
   [[menu.main]]
     identifier = "blog"
     name       = "blog"
-    url        = "/posts"
+    url        = "/ru/tech"
