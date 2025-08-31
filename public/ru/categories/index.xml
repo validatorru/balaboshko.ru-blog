@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Alex Balaboshko Пишу/читаю</title>
-    <link>//localhost:1313/ru/categories/</link>
+    <link>/ru/categories/</link>
     <description>Recent content in Categories on Alex Balaboshko Пишу/читаю</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <atom:link href="//localhost:1313/ru/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/ru/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
