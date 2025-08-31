@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teches on Alex Balaboshko Пишу/читаю</title>
-    <link>/ru/tech/</link>
+    <link>//localhost:1313/ru/tech/</link>
     <description>Recent content in Teches on Alex Balaboshko Пишу/читаю</description>
     <generator>Hugo</generator>
     <language>ru</language>
     <lastBuildDate>Sun, 31 Aug 2025 01:21:02 +0300</lastBuildDate>
-    <atom:link href="/ru/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/ru/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>zeit</title>
-      <link>/ru/tech/cli/zeit/</link>
+      <link>//localhost:1313/ru/tech/cli/zeit/</link>
       <pubDate>Sun, 31 Aug 2025 01:21:02 +0300</pubDate>
-      <guid>/ru/tech/cli/zeit/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/02-zeit/00-title.jpeg&#34; alt=&#34;timetracking intro useless picture #1&#34;&gt;&#xA;&lt;del&gt;дядечка в чалме допился&lt;/del&gt; Валтасар, Рембрант&lt;/p&gt;&#xA;&lt;h1 id=&#34;учёт-времени-zeit&#34;&gt;Учёт времени Zeit&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Introduction • Briefly introduce the concept of time tracking and its importance for productivity.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Мене, мене, текел, уфарсин&lt;/em&gt; &lt;a href=&#34;https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BD%D0%B5,_%D0%BC%D0%B5%D0%BD%D0%B5,_%D1%82%D0%B5%D0%BA%D0%B5%D0%BB,_%D1%83%D1%84%D0%B0%D1%80%D1%81%D0%B8%D0%BD&#34;&gt;.&lt;/a&gt;&#xA;Человечество научилось считать, отмерять и учитывать, теперь куда ни глянь, везде увидишь контроль и учёт:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;считают деньги в кошельках и на карточках,&lt;/li&gt;&#xA;&lt;li&gt;учитывают количество горячей и холодной воды,&lt;/li&gt;&#xA;&lt;li&gt;переписывают население в государствах,&lt;/li&gt;&#xA;&lt;li&gt;считают сколько раз человек облетел вместе с Землёй вокруг Солнца.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Все что-то считают. Я считаю шаги когда хожу, музыкант считает такты произведения, писатель — слова, издатель — листы. Укаждого дела &lt;em&gt;count(*)&lt;/em&gt; особый.&lt;/p&gt;</description>
+      <guid>//localhost:1313/ru/tech/cli/zeit/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/02-zeit/00-title.jpeg&#34; alt=&#34;timetracking intro useless picture #1&#34;&gt;&#xA;&lt;del&gt;дядечка в чалме допился&lt;/del&gt; Валтасар, Рембрант&lt;/p&gt;&#xA;&lt;h1 id=&#34;учёт-времени-zeit&#34;&gt;Учёт времени Zeit&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Introduction • Briefly introduce the concept of time tracking and its importance for productivity.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Мене, мене, текел, уфарсин&lt;/em&gt; &lt;a href=&#34;https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BD%D0%B5,_%D0%BC%D0%B5%D0%BD%D0%B5,_%D1%82%D0%B5%D0%BA%D0%B5%D0%BB,_%D1%83%D1%84%D0%B0%D1%80%D1%81%D0%B8%D0%BD&#34;&gt;.&lt;/a&gt;&#xA;Человечество научилось считать, отмерять и учитывать, теперь куда ни глянь, везде увидишь контроль и учёт:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;считают деньги в кошельках и на карточках,&lt;/li&gt;&#xA;&lt;li&gt;учитывают количество горячей и холодной воды,&lt;/li&gt;&#xA;&lt;li&gt;переписывают население в государствах,&lt;/li&gt;&#xA;&lt;li&gt;считают сколько раз человек облетел вместе с Землёй вокруг Солнца.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Все что-то считают. Я считаю шаги когда хожу, музыкант считает такты произведения, писатель — слова, издатель — листы. Укаждого дела &lt;em&gt;count(*)&lt;/em&gt; особый.&lt;/p&gt;</description>
     </item>
     <item>
       <title>nom</title>
-      <link>/ru/tech/cli/nom/</link>
+      <link>//localhost:1313/ru/tech/cli/nom/</link>
       <pubDate>Sun, 24 Aug 2025 15:08:22 +0300</pubDate>
-      <guid>/ru/tech/cli/nom/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/01-nom/01.png&#34; alt=&#34;tui rss reader nom&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;консольный-rss-ридер-nom&#34;&gt;Консольный RSS-ридер Nom&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Introduction&#xA;• Briefly introduce yourself and express your need for a CLI-based RSS news reader.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;С 2001 года командная строка присутствует в моей жизни, работе и вообще. Linux, MacOs, вот это всё.&lt;/p&gt;&#xA;&lt;p&gt;Во времена трилобитов было такое развлечение — читать текстовые «новости» (ну как новости, всякую дребедень типа обновлений в чьих-то блогах, уведомления о каких-то новых статьях и прочее).&#xA;Сначала это читалось через всякие отдельные программы, потом появился Google Reader, в котором у меня скопилось море всяких подписок. Все, кого я знал, много читали. Постепенноо всё ускорялось, появлялись подкасты, видео-хостинги, а google reader закрылся. Наступило время, когда подавляющее количество потребляемого контента стало даже не аудио, а видео, — чтение отошло на задний план.&lt;/p&gt;</description>
+      <guid>//localhost:1313/ru/tech/cli/nom/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/01-nom/01.png&#34; alt=&#34;tui rss reader nom&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;консольный-rss-ридер-nom&#34;&gt;Консольный RSS-ридер Nom&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Introduction&#xA;• Briefly introduce yourself and express your need for a CLI-based RSS news reader.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;С 2001 года командная строка присутствует в моей жизни, работе и вообще. Linux, MacOs, вот это всё.&lt;/p&gt;&#xA;&lt;p&gt;Во времена трилобитов было такое развлечение — читать текстовые «новости» (ну как новости, всякую дребедень типа обновлений в чьих-то блогах, уведомления о каких-то новых статьях и прочее).&#xA;Сначала это читалось через всякие отдельные программы, потом появился Google Reader, в котором у меня скопилось море всяких подписок. Все, кого я знал, много читали. Постепенноо всё ускорялось, появлялись подкасты, видео-хостинги, а google reader закрылся. Наступило время, когда подавляющее количество потребляемого контента стало даже не аудио, а видео, — чтение отошло на задний план.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
