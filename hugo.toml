@@ -1,67 +1,93 @@
 baseurl      = "/"
 title        = "balaboshko.ru"
 languageCode = "en-us"
+defaultContentLanguage = "ru" # <- ВАЖНО! Главный язык. Ставим 'ru', так как у тебя основной контент пока на русском.
 theme        = "hello-friend-ng"
 # paginate     = 10
 
 [params]
-  # dateform        = "Jan 2, 2006"
-  # dateformShort   = "Jan 2"
-  # dateformNum     = "2006-01-02"
-  # dateformNumTime = "2006-01-02 15:04"
-
-  # Subtitle for home
   homeSubtitle = "Внешнее запоминающее устройство"
-
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  # disableReadOtherPosts = false
-
-  # Enable sharing buttons, if you like
-  # enableSharingButtons = true
-  
-  # Show a global language switcher in the navigation bar
-  # enableGlobalLanguageMenu = true
-
-  # Metadata mostly used in document's head
   description = "Алексей Балабошко"
   keywords = "homepage, blog"
   images = [""]
 
-# [taxonomies]
-#     category = "blog"
-#     tag      = "tags"
-#     series   = "series"
+# Объявляем таксономии для своих разделов (tech, mech)
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  tech = "techs"  # Множественное число
+  mech = "mechs" # Множественное число
 
 [languages]
   [languages.ru]
     title = "Alex Balaboshko Пишу/читаю"
     keywords = ""
     contentDir = "content/ru"
+    languageName = "Русский" # Добавляем человеческое название языка
+    weight = 1 # Вес для сортировки (русский первый)
+
+    # Параметры и меню ДЛЯ РУССКОГО ЯЗЫКА
+    [languages.ru.params]
+      subtitle  = "Пишу/читаю"
+      [languages.ru.params.logo]
+        logoText = "Alex Balaboshko"
+        logoHomeLink = "/"
+
+    # Меню для русского сайта
+    [[languages.ru.menu.main]]
+      identifier = "blog"
+      name       = "Блог"
+      url        = "/ru/tech/" # Путь именно к русской секции
+      weight = 10
+
+    # [[languages.ru.menu.main]]
+    #   identifier = "about"
+    #   name       = "Обо мне"
+    #   url        = "/about/" # Предполагается, что у тебя есть такая страница
+    #   weight = 20
+
+    [[languages.ru.menu.main]]
+      identifier = "archive"
+      name       = "Архив"
+      url        = "/archive/" # Будещая страница со всем контентом
+      weight = 30
+
   [languages.en]
-    title = "Alex Balaboshko Пишу/читаю"
+    title = "Alex Balaboshko Write/Read"
     keywords = ""
     contentDir = "content/en"
+    languageName = "English"
+    weight = 2 # Английский второй
 
-  [languages.en.params]
-    subtitle  = "Пишу/читаю"
+    # Параметры и меню ДЛЯ АНГЛИЙСКОГО ЯЗЫКА
+    [languages.en.params]
+      subtitle  = "Write/Read" # Подзаголовок тоже на английском!
 
-    [languages.en.params.logo]
-      logoText = "Alex Balaboshko"
-      logoHomeLink = "/"
+      [languages.en.params.logo]
+        logoText = "Alex Balaboshko"
+        logoHomeLink = "/"
 
-  [languages.ru.params]
-    subtitle  = "Пишу/читаю"
+    # Меню для английского сайта. ВСЕ надписи и ссылки на англ.
+    [[languages.en.menu.main]]
+      identifier = "blog"
+      name       = "Blog"
+      url        = "/en/tech/" # Ведет на английскую секцию tech
+      weight = 10
 
-    [languages.ru.params.logo]
-      logoText = "Alex Balaboshko"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name       = "About"
+      url        = "/about/"
+      weight = 20
 
-  # And you can even create generic menu
-  [[menu.main]]
-    identifier = "blog"
-    name       = "blog"
-    url        = "/ru/tech"
+    [[languages.en.menu.main]]
+      identifier = "archive"
+      name       = "Archive"
+      url        = "/archive/"
+      weight = 30
+
+# Убираем общее меню [menu.main] отсюда сюда! Оно теперь внутри каждого языка.
+# [[menu.main]]
+#   identifier = "blog"
+#   name       = "blog"
+#   url        = "/ru/tech"
