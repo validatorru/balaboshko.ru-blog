@@ -36,9 +36,15 @@ theme        = "hello-friend-ng"
     # Меню для русского сайта
     [[languages.ru.menu.main]]
       identifier = "blog"
-      name       = "Блог"
+      name       = "блог"
       url        = "/ru/tech/" # Путь именно к русской секции
       weight = 10
+
+    [[languages.ru.menu.main]]
+      identifier = "reviews"
+      name       = "штуки"
+      url        = "/mech/" # Путь именно к русской секции
+      weight = 20
 
     # [[languages.ru.menu.main]]
     #   identifier = "about"
@@ -46,11 +52,11 @@ theme        = "hello-friend-ng"
     #   url        = "/about/" # Предполагается, что у тебя есть такая страница
     #   weight = 20
 
-    [[languages.ru.menu.main]]
-      identifier = "archive"
-      name       = "Архив"
-      url        = "/archive/" # Будещая страница со всем контентом
-      weight = 30
+    # [[languages.ru.menu.main]]
+    #   identifier = "archive"
+    #   name       = "Архив"
+    #   url        = "/archive/" # Будещая страница со всем контентом
+    #   weight = 30
 
   [languages.en]
     title = "Alex Balaboshko Write/Read"
