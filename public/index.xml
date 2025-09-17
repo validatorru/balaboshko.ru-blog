@@ -1,26 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alex Balaboshko Пишу/читаю</title>
-    <link>/</link>
-    <description>Recent content on Alex Balaboshko Пишу/читаю</description>
+    <title>Пишу/читаю</title>
+    <link>https://balaboshko.ru/</link>
+    <description>Recent content on Пишу/читаю</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 24 Aug 2025 15:08:22 +0300</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>ru</language>
+    <lastBuildDate>Wed, 17 Sep 2025 04:28:22 +0300</lastBuildDate>
+    <atom:link href="https://balaboshko.ru/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>/posts/test/</link>
-      <pubDate>Sun, 24 Aug 2025 15:08:22 +0300</pubDate>
-      <guid>/posts/test/</guid>
-      <description>&lt;p&gt;POSTSasdadas&#xA;asd&#xA;asda&#xA;d&#xA;a&#xA;da&#xA;d&lt;/p&gt;</description>
+      <title>челендж — удаляю свой блог и разворачиваю его заново на Ubuntu 24.04 и Nginx за 10 минут!</title>
+      <link>https://balaboshko.ru/tech/cli/ten-minutes-nginx-challenge/</link>
+      <pubDate>Wed, 17 Sep 2025 04:28:22 +0300</pubDate>
+      <guid>https://balaboshko.ru/tech/cli/ten-minutes-nginx-challenge/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Ten Minutes nginx installation challenge&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://balaboshko.ru/images/06-nginx/00.jpeg&#34; alt=&#34;Ten Minutes nginx installation challenge&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;В общем, план таков и больше никаков:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;▌║█║▌│║▌║▌█║▌║ ▌║█║▌│║▌║▌█║▌║ ▌║█&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;em&gt;Write an outline&lt;/em&gt;&lt;br&gt;&#xA;Составление тактического плана перед цифровым десантом — признак высокого интеллекта (а вовсе не паранойи)&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Backup the hell out of everything&lt;/em&gt;&lt;br&gt;&#xA;Ритуал уважения к своему будущему «я», которое в параллеьной вселенной проклинает нас сидя на холодном кафеле душевой и обнимая себя за коленки. Именно поэтому мы и бэкапим всё, что не приколочено, а то, что приколочено, отковыриваем и тоже бэкапим&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VPS snapshot,&lt;/li&gt;&#xA;&lt;li&gt;files (/etc + /home)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Delete existing Ubuntu VPS&lt;/em&gt;&lt;br&gt;&#xA;Отправить в цифровое небытие всё, что только что было упорядоченными словами и мыслями, сначала убедиться, что убиваем именно &lt;em&gt;ТОТ&lt;/em&gt; сайт, который хотим удалить&#xA;&lt;ul&gt;&#xA;&lt;li&gt;make sure the site is UP&lt;/li&gt;&#xA;&lt;li&gt;delete the VPS&lt;/li&gt;&#xA;&lt;li&gt;make sure the site is DOWN&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Upload SSH-key via hosting UI&lt;/em&gt;&lt;br&gt;&#xA;Чтобы не вводить пароли на глазах у изумлённой публики.&lt;br&gt;&#xA;Ну и вообще, ключи — это очень хорошо и полезно!&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Install fresh Ubuntu Server LTS on the VPS instance&lt;/em&gt;&lt;br&gt;&#xA;Пиу-пиу, убунту 24.04 появляется на нашем VPS&#xA;&lt;ul&gt;&#xA;&lt;li&gt;tell it to use SSH-key&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Start video, start the timer&lt;/em&gt;&lt;br&gt;&#xA;Этот шаг я продолбал, потому что запустил таймер и видео где-то на третьем шаге&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Configure Users&lt;/em&gt;&lt;br&gt;&#xA;Ходить на сервер от имени пользователя root — к проблемам с нервной системой, ergo, делаем своего пользователя из трёх букв&#xA;&lt;ul&gt;&#xA;&lt;li&gt;access VPS as a root&lt;/li&gt;&#xA;&lt;li&gt;add &lt;em&gt;bzz&lt;/em&gt; user with sudo access&lt;/li&gt;&#xA;&lt;li&gt;exit&lt;/li&gt;&#xA;&lt;li&gt;check &lt;em&gt;bzz&lt;/em&gt; login&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Upload SSH-key via ssh-copy-id&lt;/em&gt;&lt;br&gt;&#xA;Снова ключ, закидываем на сервер уже для &lt;em&gt;bzz&lt;/em&gt; и уже не через UI, а через консоль&#xA;&lt;ul&gt;&#xA;&lt;li&gt;access the VPS via ssh&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Install nginx&lt;/em&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;update Ubuntu&lt;/li&gt;&#xA;&lt;li&gt;see default Nginx page in Safari&lt;/li&gt;&#xA;&lt;li&gt;add bzz to www-data group (gpasswd -a www-data bzz) — вот на этом моменте я затупил и решил подсмотреть&lt;/li&gt;&#xA;&lt;li&gt;chmod /home/bzz/www to 775&lt;/li&gt;&#xA;&lt;li&gt;create a new webroot folder&lt;/li&gt;&#xA;&lt;li&gt;create a test index.html&lt;/li&gt;&#xA;&lt;li&gt;add a new nginx config file&lt;/li&gt;&#xA;&lt;li&gt;restart nginx&lt;/li&gt;&#xA;&lt;li&gt;see the new page&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Install SSL certificates&lt;/em&gt;&lt;br&gt;&#xA;Ну какой же сайт без SSL, вы что, смеётесь? Тут, кстати, столкнулся впервые с ситуацией, когда apt что-то делал в фоновом режиме и отказался с первого раза устанавливать что бы то ни было. Интересно&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Restart nginx&lt;/em&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;test everything&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Stop the timer, stop the video&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Publish a blog post&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;Done&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;▓▃▂▁▂▃▅▆▇█████▇▆▅▃▂▁&lt;iframe width=&#34;720&#34; height=&#34;405&#34; src=&#34;https://rutube.ru/play/embed/fbea225d02c65add5389b7e0011ff549/&#34; style=&#34;border: none;&#34; allow=&#34;clipboard-write; autoplay&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Test</title>
-      <link>/test/</link>
+      <title>шорткат для закрытия вкладок в safari</title>
+      <link>https://balaboshko.ru/tech/mac/05-safari-close-tabs-shortcut/</link>
+      <pubDate>Sat, 13 Sep 2025 18:18:22 +0300</pubDate>
+      <guid>https://balaboshko.ru/tech/mac/05-safari-close-tabs-shortcut/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://balaboshko.ru/images/05-safari-close-tabs-shortcut/00.png&#34; alt=&#34;Peter Paul Rubens. Thomas the Apostle&#34;&gt;&#xA;&lt;strong&gt;Апостол Фома &lt;a href=&#34;https://en.wikipedia.org/wiki/Thomas_the_Apostle&#34;&gt;тыц&lt;/a&gt;.  Рубенс &lt;a href=&#34;https://en.wikipedia.org/wiki/Peter_Paul_Rubens&#34;&gt;тыц&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Компютерный манипулятор «мышь». Оторопь берёт: представить только сколько километров протащили мои мышцы этот кусок пластика по офисным столам.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Попросите компьютер визуализировать все движения мышкой, которые совершают люди в вашем доме, пусть они отображаются белыми точками. Теперь попросите компьютер отдалить картинку, сменить масштаб до квартала  — вы увидите как точки сливаются в реки белых пульсирующих пикселов. Не останавливайтесь, попросите программу отдалять картинку ещё дальше и вы увидите как весь мир полыхает белым.&lt;/strong&gt;  &lt;del&gt;кажется, что-то подобное кто-то уже написал до меня&lt;/del&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Neuromancer&#34;&gt;.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>nvim dotfiles</title>
+      <link>https://balaboshko.ru/tech/nvim/04-dotfiles/</link>
+      <pubDate>Tue, 09 Sep 2025 01:18:22 +0300</pubDate>
+      <guid>https://balaboshko.ru/tech/nvim/04-dotfiles/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://balaboshko.ru/images/04-nvim-dotfiles/01.png&#34; alt=&#34;nvim dotfiles&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;настройки-моего-редактора&#34;&gt;Настройки &lt;em&gt;моего&lt;/em&gt; редактора&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Не ждите чуда — его не будет. Vim* обладает фрактальной сложностью освоения, чем больше его используешь, тем больше его понимаешь и тем больше понимаешь что только начал с ним отношения.&#xA;Начнём с очень малого и постепенно будем разматывать этот клубок. Про Lua, разницу с другими редакторами, холивары и вопросы «а почему не вот это?» &lt;del&gt;идите нахер&lt;/del&gt; — читайте где-нибудь в другом месте. Совсем начинающим тут наверное тоже будет не очень, тут размышления того, кто своё уже отбоялся, скорее. Но вы проходите, присмотритесь.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>nerpa dock</title>
+      <link>https://balaboshko.ru/mech/perifery/nerpa/</link>
+      <pubDate>Tue, 02 Sep 2025 15:08:22 +0300</pubDate>
+      <guid>https://balaboshko.ru/mech/perifery/nerpa/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://balaboshko.ru/images/03-nerpa/nerpa-dock-nrp-007t-8.jpeg&#34; alt=&#34;Nerpa nrp007t&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;nerpa-nrp007t-14-в-1-ода-приятному-серому-кирпичику-аллюминия-найденному-сегодня-утром-у-меня-на-рабочем-столе&#34;&gt;NERPA NRP007T 14 в 1: ода приятному серому кирпичику аллюминия, найденному сегодня утром у меня на рабочем столе&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Если сомневаетесь и ждёте знака покупать или не покупать — &lt;strong&gt;вот вам знак: покупайте!&lt;/strong&gt;&#xA;&lt;a href=&#34;https://market.yandex.ru/cc/7YFX3V&#34;&gt;А вот реферальная ссылка на маркет&lt;/a&gt;, кстати :)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://balaboshko.ru/images/03-nerpa/nerpa-dock-nrp-007t-10.jpeg&#34; alt=&#34;Nerpa nrp007t&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;\r\n&lt;/p&gt;&#xA;&lt;p&gt;\r&lt;/p&gt;&#xA;&lt;p&gt;\0xA&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;• My New Gray Metal Spine for the Revolution • The pre-dock life. A tangle of cables on the desk like a nest of cyber-eels. • The constant, low-grade anxiety of unplugging the wrong thing. • The search for a single umbilical cord to the digital world. • The promise of a clean rig. • This was it.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>zeit</title>
+      <link>https://balaboshko.ru/tech/cli/zeit/</link>
+      <pubDate>Sun, 31 Aug 2025 01:21:02 +0300</pubDate>
+      <guid>https://balaboshko.ru/tech/cli/zeit/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://balaboshko.ru/images/02-zeit/00-title.jpeg&#34; alt=&#34;timetracking intro useless picture #1&#34;&gt;&#xA;&lt;del&gt;дядечка в чалме допился&lt;/del&gt; Валтасар, Рембрант&lt;/p&gt;&#xA;&lt;h1 id=&#34;учёт-времени-zeit&#34;&gt;Учёт времени Zeit&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Introduction • Briefly introduce the concept of time tracking and its importance for productivity.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Мене, мене, текел, уфарсин&lt;/em&gt; &lt;a href=&#34;https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BD%D0%B5,_%D0%BC%D0%B5%D0%BD%D0%B5,_%D1%82%D0%B5%D0%BA%D0%B5%D0%BB,_%D1%83%D1%84%D0%B0%D1%80%D1%81%D0%B8%D0%BD&#34;&gt;.&lt;/a&gt;&#xA;Человечество научилось считать, отмерять и учитывать, теперь куда ни глянь, везде увидишь контроль и учёт:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;считают деньги в кошельках и на карточках,&lt;/li&gt;&#xA;&lt;li&gt;учитывают количество горячей и холодной воды,&lt;/li&gt;&#xA;&lt;li&gt;переписывают население в государствах,&lt;/li&gt;&#xA;&lt;li&gt;считают сколько раз человек облетел вместе с Землёй вокруг Солнца.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Все что-то считают. Я считаю шаги когда хожу, музыкант считает такты произведения, писатель — слова, издатель — листы. Укаждого дела &lt;em&gt;count(*)&lt;/em&gt; особый.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>nom</title>
+      <link>https://balaboshko.ru/tech/cli/nom/</link>
       <pubDate>Sun, 24 Aug 2025 15:08:22 +0300</pubDate>
-      <guid>/test/</guid>
-      <description>&lt;p&gt;asdadas&#xA;asd&#xA;asda&#xA;d&#xA;a&#xA;da&#xA;d&lt;/p&gt;</description>
+      <guid>https://balaboshko.ru/tech/cli/nom/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://balaboshko.ru/images/01-nom/01.png&#34; alt=&#34;tui rss reader nom&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;консольный-rss-ридер-nom&#34;&gt;Консольный RSS-ридер Nom&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Introduction&#xA;• Briefly introduce yourself and express your need for a CLI-based RSS news reader.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;С 2001 года командная строка присутствует в моей жизни, работе и вообще. Linux, MacOs, вот это всё.&lt;/p&gt;&#xA;&lt;p&gt;Во времена трилобитов было такое развлечение — читать текстовые «новости» (ну как новости, всякую дребедень типа обновлений в чьих-то блогах, уведомления о каких-то новых статьях и прочее).&#xA;Сначала это читалось через всякие отдельные программы, потом появился Google Reader, в котором у меня скопилось море всяких подписок. Все, кого я знал, много читали. Постепенноо всё ускорялось, появлялись подкасты, видео-хостинги, а google reader закрылся. Наступило время, когда подавляющее количество потребляемого контента стало даже не аудио, а видео, — чтение отошло на задний план.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

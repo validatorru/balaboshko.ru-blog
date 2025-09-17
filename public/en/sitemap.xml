@@ -2,50 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
-    <lastmod>2025-08-24T15:08:22+03:00</lastmod>
+    <loc>https://balaboshko.ru/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="/ru/"
+                href="https://balaboshko.ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://balaboshko.ru/en/"
                 />
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2025-08-24T15:08:22+03:00</lastmod>
-  </url><url>
-    <loc>/posts/test/</loc>
-    <lastmod>2025-08-24T15:08:22+03:00</lastmod>
-  </url><url>
-    <loc>/test/</loc>
-    <lastmod>2025-08-24T15:08:22+03:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
+    <loc>https://balaboshko.ru/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="/ru/categories/"
+                href="https://balaboshko.ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
-                />
-  </url><url>
-    <loc>/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="/ru/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/"
+                href="https://balaboshko.ru/en/categories/"
                 />
   </url>
 </urlset>

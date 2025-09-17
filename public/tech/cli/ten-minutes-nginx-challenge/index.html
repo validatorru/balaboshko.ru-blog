@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Ten Minutes nginx installation challenge
+В общем, план таков и больше никаков:
+▌║█║▌│║▌║▌█║▌║ ▌║█║▌│║▌║▌█║▌║ ▌║█
+Write an outline
+Составление тактического плана перед цифровым десантом — признак высокого интеллекта (а вовсе не паранойи) Backup the hell out of everything
+Ритуал уважения к своему будущему «я», которое в параллеьной вселенной проклинает нас сидя на холодном кафеле душевой и обнимая себя за коленки. Именно поэтому мы и бэкапим всё, что не приколочено, а то, что приколочено, отковыриваем и тоже бэкапим VPS snapshot, files (/etc &#43; /home) Delete existing Ubuntu VPS
+Отправить в цифровое небытие всё, что только что было упорядоченными словами и мыслями, сначала убедиться, что убиваем именно ТОТ сайт, который хотим удалить make sure the site is UP delete the VPS make sure the site is DOWN Upload SSH-key via hosting UI
+Чтобы не вводить пароли на глазах у изумлённой публики.
+Ну и вообще, ключи — это очень хорошо и полезно! Install fresh Ubuntu Server LTS on the VPS instance
+Пиу-пиу, убунту 24.04 появляется на нашем VPS tell it to use SSH-key Start video, start the timer
+Этот шаг я продолбал, потому что запустил таймер и видео где-то на третьем шаге Configure Users
+Ходить на сервер от имени пользователя root — к проблемам с нервной системой, ergo, делаем своего пользователя из трёх букв access VPS as a root add bzz user with sudo access exit check bzz login Upload SSH-key via ssh-copy-id
+Снова ключ, закидываем на сервер уже для bzz и уже не через UI, а через консоль access the VPS via ssh Install nginx update Ubuntu see default Nginx page in Safari add bzz to www-data group (gpasswd -a www-data bzz) — вот на этом моменте я затупил и решил подсмотреть chmod /home/bzz/www to 775 create a new webroot folder create a test index.html add a new nginx config file restart nginx see the new page Install SSL certificates
+Ну какой же сайт без SSL, вы что, смеётесь? Тут, кстати, столкнулся впервые с ситуацией, когда apt что-то делал в фоновом режиме и отказался с первого раза устанавливать что бы то ни было. Интересно Restart nginx test everything Stop the timer, stop the video Publish a blog post
+Done ▓▃▂▁▂▃▅▆▇█████▇▆▅▃▂▁
+" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104164039', 'ym');
+
+    ym(104164039, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104164039" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<link rel="canonical" href="https://balaboshko.ru/tech/cli/ten-minutes-nginx-challenge/" />
+
+
+    <title>
+        
+            челендж — удаляю свой блог и разворачиваю его заново на Ubuntu 24.04 и Nginx за 10 минут! :: Пишу/читаю  — Пишу/читаю
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.07ea7ac7da67e2e153a7dfa2457bc6a19cca824288d175e223fadc579041bc51.css" integrity="sha256-B&#43;p6x9pn4uFTp9&#43;iRXvGoZzKgkKI0XXiI/rcV5BBvFE=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="челендж — удаляю свой блог и разворачиваю его заново на Ubuntu 24.04 и Nginx за 10 минут!">
+  <meta itemprop="description" content="Ten Minutes nginx installation challenge
+В общем, план таков и больше никаков:
+▌║█║▌│║▌║▌█║▌║ ▌║█║▌│║▌║▌█║▌║ ▌║█
+Write an outline
+Составление тактического плана перед цифровым десантом — признак высокого интеллекта (а вовсе не паранойи) Backup the hell out of everything
+Ритуал уважения к своему будущему «я», которое в параллеьной вселенной проклинает нас сидя на холодном кафеле душевой и обнимая себя за коленки. Именно поэтому мы и бэкапим всё, что не приколочено, а то, что приколочено, отковыриваем и тоже бэкапим VPS snapshot, files (/etc &#43; /home) Delete existing Ubuntu VPS
+Отправить в цифровое небытие всё, что только что было упорядоченными словами и мыслями, сначала убедиться, что убиваем именно ТОТ сайт, который хотим удалить make sure the site is UP delete the VPS make sure the site is DOWN Upload SSH-key via hosting UI
+Чтобы не вводить пароли на глазах у изумлённой публики.
+Ну и вообще, ключи — это очень хорошо и полезно! Install fresh Ubuntu Server LTS on the VPS instance
+Пиу-пиу, убунту 24.04 появляется на нашем VPS tell it to use SSH-key Start video, start the timer
+Этот шаг я продолбал, потому что запустил таймер и видео где-то на третьем шаге Configure Users
+Ходить на сервер от имени пользователя root — к проблемам с нервной системой, ergo, делаем своего пользователя из трёх букв access VPS as a root add bzz user with sudo access exit check bzz login Upload SSH-key via ssh-copy-id
+Снова ключ, закидываем на сервер уже для bzz и уже не через UI, а через консоль access the VPS via ssh Install nginx update Ubuntu see default Nginx page in Safari add bzz to www-data group (gpasswd -a www-data bzz) — вот на этом моменте я затупил и решил подсмотреть chmod /home/bzz/www to 775 create a new webroot folder create a test index.html add a new nginx config file restart nginx see the new page Install SSL certificates
+Ну какой же сайт без SSL, вы что, смеётесь? Тут, кстати, столкнулся впервые с ситуацией, когда apt что-то делал в фоновом режиме и отказался с первого раза устанавливать что бы то ни было. Интересно Restart nginx test everything Stop the timer, stop the video Publish a blog post
+Done ▓▃▂▁▂▃▅▆▇█████▇▆▅▃▂▁">
+  <meta itemprop="datePublished" content="2025-09-17T04:28:22+03:00">
+  <meta itemprop="dateModified" content="2025-09-17T04:28:22+03:00">
+  <meta itemprop="wordCount" content="430">
+  <meta itemprop="image" content="https://balaboshko.ru/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://balaboshko.ru/">
+  <meta name="twitter:title" content="челендж — удаляю свой блог и разворачиваю его заново на Ubuntu 24.04 и Nginx за 10 минут!">
+  <meta name="twitter:description" content="Ten Minutes nginx installation challenge
+В общем, план таков и больше никаков:
+▌║█║▌│║▌║▌█║▌║ ▌║█║▌│║▌║▌█║▌║ ▌║█
+Write an outline
+Составление тактического плана перед цифровым десантом — признак высокого интеллекта (а вовсе не паранойи) Backup the hell out of everything
+Ритуал уважения к своему будущему «я», которое в параллеьной вселенной проклинает нас сидя на холодном кафеле душевой и обнимая себя за коленки. Именно поэтому мы и бэкапим всё, что не приколочено, а то, что приколочено, отковыриваем и тоже бэкапим VPS snapshot, files (/etc &#43; /home) Delete existing Ubuntu VPS
+Отправить в цифровое небытие всё, что только что было упорядоченными словами и мыслями, сначала убедиться, что убиваем именно ТОТ сайт, который хотим удалить make sure the site is UP delete the VPS make sure the site is DOWN Upload SSH-key via hosting UI
+Чтобы не вводить пароли на глазах у изумлённой публики.
+Ну и вообще, ключи — это очень хорошо и полезно! Install fresh Ubuntu Server LTS on the VPS instance
+Пиу-пиу, убунту 24.04 появляется на нашем VPS tell it to use SSH-key Start video, start the timer
+Этот шаг я продолбал, потому что запустил таймер и видео где-то на третьем шаге Configure Users
+Ходить на сервер от имени пользователя root — к проблемам с нервной системой, ergo, делаем своего пользователя из трёх букв access VPS as a root add bzz user with sudo access exit check bzz login Upload SSH-key via ssh-copy-id
+Снова ключ, закидываем на сервер уже для bzz и уже не через UI, а через консоль access the VPS via ssh Install nginx update Ubuntu see default Nginx page in Safari add bzz to www-data group (gpasswd -a www-data bzz) — вот на этом моменте я затупил и решил подсмотреть chmod /home/bzz/www to 775 create a new webroot folder create a test index.html add a new nginx config file restart nginx see the new page Install SSL certificates
+Ну какой же сайт без SSL, вы что, смеётесь? Тут, кстати, столкнулся впервые с ситуацией, когда apt что-то делал в фоновом режиме и отказался с первого раза устанавливать что бы то ни было. Интересно Restart nginx test everything Stop the timer, stop the video Publish a blog post
+Done ▓▃▂▁▂▃▅▆▇█████▇▆▅▃▂▁">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-09-17 04:28:22 &#43;0300 MSK" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                Alex Balaboshko</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/tech/">блог</a></li><li><a href="/mech/">штуки</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://balaboshko.ru/tech/cli/ten-minutes-nginx-challenge/">челендж — удаляю свой блог и разворачиваю его заново на Ubuntu 24.04 и Nginx за 10 минут!</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p><em>Ten Minutes nginx installation challenge</em></p>
+<p><img src="/images/06-nginx/00.jpeg" alt="Ten Minutes nginx installation challenge"></p>
+<p><em>В общем, план таков и больше никаков:</em></p>
+<p>▌║█║▌│║▌║▌█║▌║ ▌║█║▌│║▌║▌█║▌║ ▌║█</p>
+<ol>
+<li><em>Write an outline</em><br>
+Составление тактического плана перед цифровым десантом — признак высокого интеллекта (а вовсе не паранойи)</li>
+<li><em>Backup the hell out of everything</em><br>
+Ритуал уважения к своему будущему «я», которое в параллеьной вселенной проклинает нас сидя на холодном кафеле душевой и обнимая себя за коленки. Именно поэтому мы и бэкапим всё, что не приколочено, а то, что приколочено, отковыриваем и тоже бэкапим
+<ul>
+<li>VPS snapshot,</li>
+<li>files (/etc + /home)</li>
+</ul>
+</li>
+<li><em>Delete existing Ubuntu VPS</em><br>
+Отправить в цифровое небытие всё, что только что было упорядоченными словами и мыслями, сначала убедиться, что убиваем именно <em>ТОТ</em> сайт, который хотим удалить
+<ul>
+<li>make sure the site is UP</li>
+<li>delete the VPS</li>
+<li>make sure the site is DOWN</li>
+</ul>
+</li>
+<li><em>Upload SSH-key via hosting UI</em><br>
+Чтобы не вводить пароли на глазах у изумлённой публики.<br>
+Ну и вообще, ключи — это очень хорошо и полезно!</li>
+<li><em>Install fresh Ubuntu Server LTS on the VPS instance</em><br>
+Пиу-пиу, убунту 24.04 появляется на нашем VPS
+<ul>
+<li>tell it to use SSH-key</li>
+</ul>
+</li>
+<li><em>Start video, start the timer</em><br>
+Этот шаг я продолбал, потому что запустил таймер и видео где-то на третьем шаге</li>
+<li><em>Configure Users</em><br>
+Ходить на сервер от имени пользователя root — к проблемам с нервной системой, ergo, делаем своего пользователя из трёх букв
+<ul>
+<li>access VPS as a root</li>
+<li>add <em>bzz</em> user with sudo access</li>
+<li>exit</li>
+<li>check <em>bzz</em> login</li>
+</ul>
+</li>
+<li><em>Upload SSH-key via ssh-copy-id</em><br>
+Снова ключ, закидываем на сервер уже для <em>bzz</em> и уже не через UI, а через консоль
+<ul>
+<li>access the VPS via ssh</li>
+</ul>
+</li>
+<li><em>Install nginx</em>
+<ul>
+<li>update Ubuntu</li>
+<li>see default Nginx page in Safari</li>
+<li>add bzz to www-data group (gpasswd -a www-data bzz) — вот на этом моменте я затупил и решил подсмотреть</li>
+<li>chmod /home/bzz/www to 775</li>
+<li>create a new webroot folder</li>
+<li>create a test index.html</li>
+<li>add a new nginx config file</li>
+<li>restart nginx</li>
+<li>see the new page</li>
+</ul>
+</li>
+<li><em>Install SSL certificates</em><br>
+Ну какой же сайт без SSL, вы что, смеётесь? Тут, кстати, столкнулся впервые с ситуацией, когда apt что-то делал в фоновом режиме и отказался с первого раза устанавливать что бы то ни было. Интересно</li>
+<li><em>Restart nginx</em>
+<ul>
+<li>test everything</li>
+</ul>
+</li>
+<li><em>Stop the timer, stop the video</em></li>
+<li><em>Publish a blog post</em><br>
+<em>Done</em></li>
+</ol>
+<p>▓▃▂▁▂▃▅▆▇█████▇▆▅▃▂▁<iframe width="720" height="405" src="https://rutube.ru/play/embed/fbea225d02c65add5389b7e0011ff549/" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+<p>Видео длится 18 минут, из которых я полторы минуты выбираю саундрек (не для вас, а для себя, вы всё равно ничего не услышите), потом щзабываю как добавить пользователя в нужную мне группу, чтобы Nginx увидел мою папку, а затем решаю установить SSL-сертификаты и гуглю яндексом всплывшую ошибку.</p>
+<p>А, ну и ещё я смешно мечусь между окнами в tmux потому что забыл, что в чистой убунте в командной строке не включены vim-клавиши :)</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
+
+
+
+
+    </body>
+</html>
